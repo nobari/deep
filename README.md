@@ -1,11 +1,12 @@
 # step by step classification for Production
 
+The entire model creation and deployment is explained in details in [this notebook](classification/model.ipynb).
+
 > It is as example for creating a classification model for production
 
 We will walk through:
 
 - building a Deep Neural Network that predicts labels given features (using scikit-learn and Keras)
--- the entire model creation is explained in details in (this notebook)[classification/model.ipynb]
 - build a REST API that predicts labels based on the model (using Flask and gunicorn)
 - deploy the model to production on Google App Engine
 
