@@ -5,7 +5,7 @@
 We will walk through:
 
 - building a Deep Neural Network that predicts labels given features (using scikit-learn and Keras)
--- the entire model creation is explained in details in (this notebook)[]
+-- the entire model creation is explained in details in (this notebook)[classification/model.ipynb]
 - build a REST API that predicts labels based on the model (using Flask and gunicorn)
 - deploy the model to production on Google App Engine
 
@@ -20,8 +20,8 @@ Requirements:
 Clone this repository:
 
 ```bash
-git clone git@github.com:nobari/X.git
-cd X
+git clone git@github.com:nobari/deep.git
+cd deep
 ```
 
 Install libraries:
@@ -39,7 +39,7 @@ flask run
 ## Make predictions
 
 ```bash
-curl -d '{"neighbourhood_group": "Brooklyn", "latitude": 40.64749, "longitude": -73.97237, "room_type": "Private room", "minimum_nights": 1, "number_of_reviews": 9, "calculated_host_listings_count": 6, "availability_365": 365}' -H "Content-Type: application/json" -X POST http://localhost:5000
+curl -d '{"0": "Brooklyn", "1": 123, "2": -123, "3": 123, "4": 123}' -H "Content-Type: application/json" -X POST http://localhost:5000
 ```
 
 ## Deploy to Google App Engine
